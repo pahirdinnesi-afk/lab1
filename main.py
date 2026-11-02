@@ -4,9 +4,9 @@ fout=open("output.txt","w")
 ls_names=[]
 lines=fin.readlines()
 for line in lines:
-    if line.startswith("Details:"):
+    if "Cyrus" in line:
 
-        name=line.split()[-1]
+        name=line.split()[3].split(")")[0]
         if name not in ls_names:
             ls_names.append(name)
 
