@@ -6,7 +6,7 @@ lines=fin.readlines()
 for line in lines:
     if line.startswith("Details:"):
 
-        name=line.split()[1].split("=")[-1]
+        name=line.split()[-1]
         if name not in ls_names:
             ls_names.append(name)
 
